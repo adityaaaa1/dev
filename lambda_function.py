@@ -3,7 +3,7 @@ import pandas as pd
 import json
 from custom_encoder import CustomEncoder
 import logging
-#print("5")
+print("5")
 logger = logging.getLogger()
 #print("7")
 logger.setLevel(logging.INFO)
