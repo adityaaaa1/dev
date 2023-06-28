@@ -13,9 +13,10 @@ phases:
       - zip -r9 ../deployment_package.zip .
       - cd ..
       - zip -g deployment_package.zip lambda_function.py
-      - zip -g deployment_package.zip custom_encoder.py
+      - zip -g custom_package.zip custom_encoder.py
   post_build:
     commands:
       - echo "Updating lambda Function..."
       - aws lambda update-function-code --function-name APIGATEWAYOPERATIONS --zip-file fileb://deployment_package.zip
+      - aws lambda update-function-code --function-name APIGATEWAYOPERATIONS --zip-file fileb://custom_package.zip
       - echo "DONE!!"
