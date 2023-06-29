@@ -5,7 +5,7 @@ from custom_encoder import CustomEncoder
 import logging
 print("5")
 logger = logging.getLogger()
-#print("7")
+print("7")
 logger.setLevel(logging.INFO)
 #print("9")
 dynamodbTableName='Clouddatatable'
